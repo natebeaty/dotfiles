@@ -4,8 +4,8 @@ export PATH="$HOME/.node/bin:$PATH"
 # Use project specific binaries before global ones
 export PATH="node_modules/.bin:vendor/bin:$PATH"
 
-# Make sure PHP 7.1 is loaded
-export PATH="$(brew --prefix homebrew/php/php71)/bin:$PATH"
+# Use PHP5.6 from homebrew
+export PATH="$(brew --prefix homebrew/php/php56)/bin:$PATH"
 
 # Make sure coreutils are loaded before system commands
 # I've disabled this for now because I only use "ls" which is

@@ -62,7 +62,7 @@ defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
-sudo systemsetup -settimezone "Europe/Brussels" > /dev/null
+sudo systemsetup -settimezone "America/Chicago" > /dev/null
 
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
@@ -126,9 +126,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     OpenWith -bool true \
     Privileges -bool true
 
-# Auto hide menu bar
-defaults write NSGlobalDomain _HIHideMenuBar -bool true
-
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
@@ -191,13 +188,13 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 # defaults write com.apple.dock wvous-tl-corner -int 2
 # defaults write com.apple.dock wvous-tl-modifier -int 0
 # Top right screen corner → Put display to sleep
-defaults write com.apple.dock wvous-tr-corner -int 10
+defaults write com.apple.dock wvous-tr-corner -int 0
 defaults write com.apple.dock wvous-tr-modifier -int 0
 # Bottom left screen corner → Start screen saver
 # defaults write com.apple.dock wvous-bl-corner -int 5
 # defaults write com.apple.dock wvous-bl-modifier -int 0
 # Bottom right screen corner → Launchpad
-defaults write com.apple.dock wvous-br-corner -int 11
+defaults write com.apple.dock wvous-br-corner -int 0
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
@@ -283,7 +280,7 @@ defaults write com.apple.ical "first minute of work hours" 540
 ###############################################################################
 
 # Custom DateFormat
-defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  H:mm"
+defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm"
 
 ###############################################################################
 # Photos                                                                      #

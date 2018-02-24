@@ -8,7 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="taybalt-custom"
+ZSH_THEME="cobalt2"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -52,7 +52,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(composer git git-extras httpie github npm sublime vagrant laravel5)
+plugins=(composer git git-extras httpie github npm sublime)
 
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
@@ -62,11 +62,11 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='subl -w'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

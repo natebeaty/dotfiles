@@ -22,17 +22,14 @@ curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/lumen-installer laravel/spark-installer laravel/valet
-
-# Install Laravel Valet
-$HOME/.composer/vendor/bin/valet install
+# /usr/local/bin/composer global require laravel/installer laravel/lumen-installer laravel/spark-installer laravel/valet
 
 # Install global NPM packages
-npm install --global yarn
+# npm install --global yarn
 
 # Create a Sites directory
 # This is a default directory for macOS user accounts but doesn't comes pre-installed
-mkdir $HOME/Sites
+# mkdir $HOME/Sites
 
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
