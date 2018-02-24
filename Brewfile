@@ -4,7 +4,6 @@ tap 'caskroom/eid'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
 tap 'homebrew/bundle'
-tap 'homebrew/dupes'
 tap 'homebrew/php'
 
 # Install ZSH
@@ -20,9 +19,6 @@ brew 'findutils'
 # Install Bash 4
 brew 'bash'
 
-# Install more recent versions of some macOS tools
-brew 'homebrew/dupes/grep'
-
 # Install Binaries
 brew 's3cmd'
 brew 'git'
@@ -33,6 +29,7 @@ brew 'wget'
 
 # Development
 brew 'bower'
+brew 'composer'
 brew 'php56'
 brew 'php56-imagick'
 brew 'php56-redis'
@@ -49,11 +46,16 @@ brew 'wp-cli'
 brew 'mysql'
 
 # Apps
+cask '1password'
 cask 'acorn'
 cask 'alfred'
 cask 'caffeine'
+cask 'cardhop'
+cask 'dropbox'
+cask 'fantastical'
 cask 'forklift'
 cask 'google-chrome'
+cask 'istat-menus'
 cask 'iterm2'
 cask 'on-the-job'
 cask 'sequel-pro'
@@ -80,8 +82,6 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Install Mac App Store apps
-mas '1Password', id: 443987910
-mas 'Byword', id: 420212497
 mas 'Giphy Capture', id: 668208984
 mas 'Sketch', id: 402476602
 mas 'Tweetbot', id: 557168941
