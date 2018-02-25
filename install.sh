@@ -24,6 +24,9 @@ chsh -s $(which zsh)
 # Symlink the Mackup config file to the home directory
 ln -s ./.mackup.cfg $HOME/.mackup.cfg
 
+# Various dev setup
+source .devsetup
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos

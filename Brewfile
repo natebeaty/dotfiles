@@ -30,20 +30,20 @@ brew 'wget'
 # Development
 brew 'bower'
 brew 'composer'
-brew 'php56'
+brew 'dnsmasq'
+brew 'httpd'
+brew 'mysql'
+brew 'php56 --with-httpd'
 brew 'php56-imagick'
 brew 'php56-redis'
 brew 'php56-xdebug'
-brew 'dnsmasq'
 brew 'pyenv-virtualenv'
 brew 'python'
 brew 'python3'
 brew 'rbenv'
 brew 'rbenv-gemset'
 brew 'sphinx'
-brew 'composer'
 brew 'wp-cli'
-brew 'mysql'
 
 # Apps
 cask '1password'
@@ -57,11 +57,15 @@ cask 'forklift'
 cask 'google-chrome'
 cask 'istat-menus'
 cask 'iterm2'
+cask 'licecap'
+cask 'nvalt'
 cask 'on-the-job'
 cask 'sequel-pro'
+cask 'sketch'
 cask 'slack'
 cask 'sourcetree'
-cask 'sublime-text'
+cask 'spotify'
+cask 'sublime-text-dev'
 cask 'the-hit-list'
 cask 'transmit'
 cask 'virtualbox'
@@ -82,10 +86,11 @@ cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
 
 # Install Mac App Store apps
-mas 'Giphy Capture', id: 668208984
-mas 'Sketch', id: 402476602
-mas 'Tweetbot', id: 557168941
 mas 'Copied', id: 1026349850
-mas 'unDock', id: 402359583
 mas 'DaisyDisk', id: 411643860
+mas 'Giphy Capture', id: 668208984
+mas 'Moom', id: 402476602
+mas 'Skitch', id: 402476602
+mas 'Tweetbot', id: 557168941
+mas 'unDock', id: 402359583
 
