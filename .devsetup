@@ -12,21 +12,27 @@ sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>
 
 # Backup old httpd.conf if not already done
 if [ ! -f /usr/local/etc/httpd/httpd.conf-bak ]; then
-	cp /usr/local/etc/httpd/httpd.conf /usr/local/etc/httpd/httpd.conf-bak
+	mv /usr/local/etc/httpd/httpd.conf /usr/local/etc/httpd/httpd.conf-bak
 fi
-# Copy over dotfiles httpdconf
-cp ~/.dotfiles/httpd.conf /usr/local/etc/httpd/
-cp ~/.dotfiles/httpd-vhosts.conf /usr/local/etc/httpd/extra/
+# Link httpd confs
+ln -s ~/.dotfiles/httpd.conf /usr/local/etc/httpd/
+ln -s ~/.dotfiles/httpd-vhosts.conf /usr/local/etc/httpd/extra/
 
 # Dnsmasq
 grep -q -F 'address=/.localhost/127.0.0.1' $(brew --prefix)/etc/dnsmasq.conf || echo 'address=/.localhost/127.0.0.1' >> $(brew --prefix)/etc/dnsmasq.confecho 'address=/.localhost/127.0.0.1' >> $(brew --prefix)/etc/dnsmasq.conf
 sudo mkdir -p /etc/resolver
 sudo bash -c 'echo "nameserver 127.0.0.1" > /etc/resolver/localhost'
 
-# make mysql less strict
+# Make mysql less strict
 grep -q -F 'sql_mode=NO_ENGINE_SUBSTITUTION' $(brew --prefix)/etc/my.cnf || echo 'sql_mode=NO_ENGINE_SUBSTITUTION' >> $(brew --prefix)/etc/my.cnf
 
-# restart services
+# Bmxmuseum specifics
+sudo mkdir -p /var/log/sphinxsearch && sudo chown $(whoami):staff /var/log/sphinxsearch
+sudo mkdir -p /var/lib/sphinxsearch/data && sudo chown $(whoami):staff /var/lib/sphinxsearch/data
+
+# Restart services
 sudo brew services restart dnsmasq
 sudo brew services restart httpd
 sudo brew services restart mysql
+
+# human: import all mysql databases

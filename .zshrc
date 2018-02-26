@@ -1,3 +1,12 @@
+# Virtualenvwrapper things
+if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
+  export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
+  export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+  export WORKON_HOME=$HOME/.virtualenvs
+  export PROJECT_HOME=$HOME/Sites
+  source /usr/local/bin/virtualenvwrapper.sh
+fi
+
 # Path to your dotfiles installation.
 export DOTFILES=$HOME/.dotfiles
 
@@ -8,7 +17,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="taybalt-custom"
+ZSH_THEME="af-magic"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
