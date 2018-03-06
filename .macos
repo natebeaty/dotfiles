@@ -67,6 +67,15 @@ sudo systemsetup -settimezone "America/Chicago" > /dev/null
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+# Automatically illuminate built-in MacBook keyboard in low light
+defaults write com.apple.BezelServices kDim -bool true
+# Turn off keyboard illumination when computer is not used for 5 minutes
+defaults write com.apple.BezelServices kDimTime -int 300
+
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
@@ -87,6 +96,9 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 
 # Finder: show path bar
 defaults write com.apple.finder ShowPathbar -bool true
+
+# Finder: show all filename extensions
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # When performing a search, search the current folder by default
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -141,6 +153,9 @@ defaults write com.apple.dock mouse-over-hilite-stack -bool true
 
 # Change minimize/maximize window effect
 defaults write com.apple.dock mineffect -string "scale"
+
+# Set the icon size of Dock items
+defaults write com.apple.dock tilesize -int 50
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -290,12 +305,6 @@ defaults write com.apple.menuextra.clock DateFormat "EEE MMM d  h:mm"
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-# todo:
-# always show extensions
-# smaller dock size
-# keyboard repeat rate max
-# keyboard repeate delay min
 
 ###############################################################################
 # Kill affected applications                                                  #
