@@ -54,6 +54,7 @@ cask 'acorn'
 cask 'alfred'
 cask 'caffeine'
 cask 'cardhop'
+cask 'codekit'
 cask 'dropbox'
 cask 'fantastical'
 cask 'forklift'
@@ -97,4 +98,3 @@ mas 'Moom', id: 402476602
 mas 'Skitch', id: 402476602
 mas 'Tweetbot', id: 557168941
 mas 'unDock', id: 402359583
-
