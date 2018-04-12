@@ -36,3 +36,4 @@ sudo brew services restart httpd
 sudo brew services restart mysql
 
 # human: import all mysql databases
+# human: set up smtp gmail relay. this worked: https://www.justinsilver.com/technology/osx/send-emails-mac-os-x-postfix-gmail-relay/
