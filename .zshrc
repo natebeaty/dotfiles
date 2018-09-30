@@ -2,6 +2,7 @@
 if [[ -f /usr/local/bin/virtualenvwrapper.sh ]]; then
   export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2
   export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+  export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
   export WORKON_HOME=$HOME/.virtualenvs
   export PROJECT_HOME=$HOME/Sites
   source /usr/local/bin/virtualenvwrapper.sh
@@ -61,7 +62,7 @@ ZSH_CUSTOM=$DOTFILES
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(composer git git-extras httpie github npm pyen sublime thefuck z rbenv)
+plugins=(composer git git-extras httpie github npm pyenv sublime thefuck z rbenv)
 
 # Activate Oh-My-Zsh
 source $ZSH/oh-my-zsh.sh
