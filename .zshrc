@@ -83,3 +83,6 @@ fi
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# add ~/bin
+export PATH=~/bin:$PATH
