@@ -35,5 +35,11 @@ sudo brew services restart dnsmasq
 sudo brew services restart httpd
 sudo brew services restart mysql
 
+# PHP hooha
+pecl install imagick
+pecl install memcached
+pecl install redis
+pecl install xdebug
+
 # human: import all mysql databases
 # human: set up smtp gmail relay. this worked: https://www.justinsilver.com/technology/osx/send-emails-mac-os-x-postfix-gmail-relay/
