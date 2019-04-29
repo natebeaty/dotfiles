@@ -59,6 +59,10 @@ cask 'cardhop'
 cask 'codekit'
 cask 'dropbox'
 cask 'fantastical'
+cask 'firefox'
+cask 'font-source-code-pro'
+cask 'font-source-sans-pro'
+cask 'font-source-serif-pro'
 cask 'forklift'
 cask 'google-chrome'
 cask 'imageoptim'
@@ -69,17 +73,20 @@ cask 'karabiner'
 cask 'licecap'
 cask 'nvalt'
 cask 'on-the-job'
-cask 'sequel-pro'
+cask 'sequel-pro-nightly'
 cask 'sketch'
 cask 'slack'
 cask 'sourcetree'
 cask 'spotify'
 cask 'sublime-text-dev'
+cask 'superduper'
 cask 'the-hit-list'
+cask 'the-unarchiver'
 cask 'transmit'
 cask 'virtualbox'
 cask 'virtualbox-extension-pack'
 cask 'vlc'
+cask 'xact'
 
 # Quicklook
 cask 'qlcolorcode'
@@ -99,6 +106,7 @@ mas 'Copied', id: 1026349850
 mas 'DaisyDisk', id: 411643860
 mas 'Giphy Capture', id: 668208984
 mas 'Moom', id: 402476602
+mas 'Sketch', id: 852320343
 mas 'Skitch', id: 402476602
 mas 'Tweetbot', id: 557168941
 mas 'unDock', id: 402359583
