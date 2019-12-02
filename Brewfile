@@ -44,7 +44,9 @@ brew 'rbenv'
 brew 'rbenv-gemset'
 brew 'redis'
 brew 'sphinx --with-mysql'
+brew 'transmission'
 brew 'wp-cli'
+brew 'yarn'
 
 # Apps
 cask '1password'
