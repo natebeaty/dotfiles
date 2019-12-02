@@ -10,9 +10,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 sudo apachectl stop
 sudo launchctl unload -w /System/Library/LaunchDaemons/org.apache.httpd.plist 2>/dev/null
 
-# Backup old httpd.conf if not already done
+# Backup old httpd.conf & httpd-vhosts.conf if not already done
 if [ ! -f /usr/local/etc/httpd/httpd.conf-bak ]; then
 	mv /usr/local/etc/httpd/httpd.conf /usr/local/etc/httpd/httpd.conf-bak
+fi
+if [ ! -f /usr/local/etc/httpd/extra/httpd-vhosts.conf-bak ]; then
+	mv /usr/local/etc/httpd/extra/httpd-vhosts.conf /usr/local/etc/httpd/extra/httpd-vhosts.conf-bak
 fi
 # Link httpd confs
 ln -s ~/.dotfiles/httpd.conf /usr/local/etc/httpd/
