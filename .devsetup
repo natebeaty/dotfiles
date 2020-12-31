@@ -37,6 +37,7 @@ sudo mkdir -p /var/lib/sphinxsearch/data && sudo chown $(whoami):staff /var/lib/
 sudo brew services restart dnsmasq
 sudo brew services restart httpd
 sudo brew services restart mysql
+brew services restart redis
 
 # PHP hooha
 pecl install imagick
