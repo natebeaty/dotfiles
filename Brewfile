@@ -54,7 +54,6 @@ cask 'brave-browser'
 cask 'caffeine'
 cask 'cardhop'
 cask 'codekit'
-cask 'dropbox'
 cask 'fantastical'
 cask 'firefox'
 cask 'fork'
@@ -69,7 +68,6 @@ cask 'macdown'
 cask 'nvalt'
 cask 'on-the-job'
 cask 'sequel-pro'
-cask 'sketch'
 cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
@@ -98,7 +96,6 @@ cask 'font-source-serif-pro'
 # Install Mac App Store apps
 mas 'Copied', id: 1026349850
 mas 'DaisyDisk', id: 411643860
-mas 'Giphy Capture', id: 668208984
 mas 'Moom', id: 402476602
 mas 'Sketch', id: 852320343
 mas 'Skitch', id: 402476602
