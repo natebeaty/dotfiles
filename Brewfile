@@ -1,8 +1,5 @@
 # Taps
 tap 'homebrew/cask'
-# tap 'homebrew/eid'
-# tap 'homebrew/fonts'
-tap 'homebrew/versions'
 tap 'homebrew/bundle'
 
 # Install ZSH
