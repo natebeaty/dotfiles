@@ -1,8 +1,8 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/eid'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+# tap 'homebrew/eid'
+# tap 'homebrew/fonts'
+tap 'homebrew/versions'
 tap 'homebrew/bundle'
 
 # Install ZSH
